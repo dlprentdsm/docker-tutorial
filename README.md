@@ -3,7 +3,7 @@
 # Docker Tutorial:
 A Docker container is like a **virtual machine** (and on windows it is) but on linux it is not VM, it just uses **namespace changes** to act like a VM. This means it runs quickly on your cpu, but it doesn’t see your normal file system, it sees its own view, and therefore you have to either copy files to its filesystem or else link directories that you want it to see. Similarly, it doesn’t see the normal network ports, so again, you need to link the ones you want to expose.
 
-**!!!Important!!!** you will need to ```sudo``` to run any docker commands on our machines- i.e. ```sudo docker run xyz```. I generally just run ```sudo su``` to avoid having to type ```sudo``` constantly.
+**!!!Important!!!** you may need to ```sudo``` to run any docker commands i.e. ```sudo docker run xyz```. You can use```sudo su``` to avoid having to type ```sudo``` constantly, but this is not necessarily a good practice.
 
 ##### Quick basic terminology:
 A **Dockerfile** is used to **build** a docker **image**, which, when the image is being run, creates a **container** (i.e. virtual machine)
