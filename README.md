@@ -168,5 +168,5 @@ Sometimes, to speed development, you may want to start a container, then enter i
 5) If you are curious docker stores files that are not linked under ```/var/lib/docker/containers/[container-id]```
 So when we talk about how docker is not VM, but rather uses namespaces to hide, this is what we mean. All of the files of a container are ```/var/lib/docker/containers/[container-id]```, but inside of the container it thinks that ```/var/lib/docker/containers/[container-id]``` is just ```/``` But ***please please please never play with the files here.*** It is very complex and anything you could ever want to do has an actual correct command to do it (the easiest way is just to link volumes, but if you can't do that there is ```docker copy``` for example, to copy files from container to host or vice versa.)
 
-
+6) If you need to just restart a single container in a docker-compose group (because you have pushed changes only affecting a single container), use ```docker-compose restart [name]```
 
