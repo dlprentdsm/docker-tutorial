@@ -174,3 +174,5 @@ There are two possibilities. In the first case, suppose we have changed somethin
 7) Checking Docker Filesystem useage:
 ```docker system df```
 
+8) Remove images without at least one container associated, to free up space: ```docker image prune --all```
+
