@@ -15,7 +15,7 @@ The dockerfile gives the step by step instructions for building the image.
 
 We will start with the a simple common docker file.
 ```
-FROM python:3.7.  #uses python:3.7 base dockerfile from dockerhub (like github for docker) 
+FROM python:3.7  #uses python:3.7 base dockerfile from dockerhub (like github for docker) 
 WORKDIR /usr/src/app #change directory (like cd in bash)
 ADD requirements.txt /usr/src/app/ #copy ./requirements.txt to from the host to /usr/src/app/ in the container.
 RUN pip install -r /usr/src/app/requirements.txt  #pip install
