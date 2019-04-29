@@ -171,3 +171,6 @@ So when we talk about how docker is not VM, but rather uses namespaces to hide, 
 6) Applying changes to a single container:
 There are two possibilities. In the first case, suppose we have changed something that will change the image. In this case, no need for ```docker-compose down```. Just ```docker-compose up -d --build``` will rebuild only the changed images and restart those containers. Alternatively, you may have changed something that is volume mounted in. In this case, you don't need to rebuild (and in fact if you try to rebuild it won't because there is no change). Instead, just do ```docker-compose restart [name]``` to restart that container.
 
+7) Checking Docker Filesystem useage:
+```docker system df```
+
